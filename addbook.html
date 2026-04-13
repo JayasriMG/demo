@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOGIN FORM</title>
+    <style>
+      body{
+        align-items: center;
+        justify-content: center;
+        background-color: grey;
+      }
+      label{
+         margin-left:50px;
+      }
+      form{
+        margin:solid 2px black;
+        border:solid 2px black;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        margin-right:600px;
+        margin-left:300px;
+      }
+      input{
+        border:solid 2px black;
+        border-radius: 5px;
+        margin-top:30px;
+        margin-bottom: 10px;
+        margin-left:30px;
+      }
+      button{
+        background-color: green;
+        margin-left:200px;
+        margin-top:30px;
+        margin-bottom:40px;
+      }
+      h3{
+        margin-left:90px;
+      }
+    </style>
+  </head>
+  <body>
+      <form>
+        <h3>ADMIN LOGIN FORM</h3>
+        <label>
+          Book Name :
+        </label>
+        <input type='text' id='bookname' required placeholder='Book Name'><br>
+        
+        <label>
+            Author :
+        </label>
+        <input type='text' id='author' required placeholder='Author Name'><br>
+        
+         <label>
+            Issued Status :
+        </label>
+        <input type='text' id='issuestatus' required placeholder='Issued Status'><br>
+        
+         <label>
+            Date :
+        </label>
+        <input type='text' id='date' required placeholder='Date '><br>
+        
+        <label>Copies Available </label>
+        <input type='text' id='copy' required placeholder='Copies Available  '><br>
+        <button onclick='addbook()'>ADD BOOK</button>
+        
+      </form>
+      
+      <script>
+        function addbook(){
+          let name=document.getElementById('bookname').value;
+          let author=document.getElementById('author').value;
+          let issuestatus=document.getElementById('issuestatus').value;
+          let date=document.getElementById('date').value;
+          let copy=document.getElementById('copy').value;
+
+          if (name=='' || author=='' || issuestatus=='' || date=='' || copy==''){
+            alert('fill details !!!!');
+          }
+          else{
+            alert('Bood Added!!');
+          }
+        }
+      </script>
+  </body>
+</html>
